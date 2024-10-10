@@ -15,7 +15,7 @@
     );
 
     if(!$connect){
-        echo 'Error code: '. mysqli_connect_errno();
+        echo 'Error code: '. mysqli_connect_errno();    
         echo 'Error Message: '. mysqli_connect_error();
         exit;
     }
