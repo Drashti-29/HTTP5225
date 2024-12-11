@@ -18,4 +18,8 @@ class Course extends Model
         'course_index',
         'course_description'
     ];
+    
+    public function faculty(){
+        $this -> belongsTo(Faculty::class);
+    }
 }

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Student;
 use App\Models\User;
 use App\Models\Course;
+use App\Models\Faculty;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -23,5 +24,18 @@ class DatabaseSeeder extends Seeder
         ]);
         Student::factory(100)->create();
         Course::factory(100)->create();
+        Faculty::factory()->create([
+            'name' => 'Adam'
+        ]);
+        Faculty::factory()->create([
+            'name' => 'Joanna'
+        ]);
+        Faculty::factory()->create([
+            'name' => 'Chrishan'
+        ]);
+        Faculty::factory()->create([
+            'name' => 'Gary'
+        ]);
+
     }
 }
