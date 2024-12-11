@@ -76,6 +76,9 @@ class CourseController extends Controller
     public function destroy($id)
     {
         $course=Course::withTrashed()->where('id',$id)->first();
+        // dd($course); // Debug the course
+        dd($course->trashed()); // Should return `true` if the course is soft deleted
+
         $course->forceDelete();
         return redirect()->route('courses.trashed');
     }
