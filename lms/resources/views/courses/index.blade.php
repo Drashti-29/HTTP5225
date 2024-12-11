@@ -2,22 +2,24 @@
 @section('content')
     <div class="row">
         <div class="col">
-            <h1 class="display-2">All students</h1>
+            <h1 class="display-2">All courses</h1>
+            <a href="{{ route('courses.create') }}">Create New Course</a>
+            <a href="{{ route('courses.trashed') }}">Trashes Course</a>
         </div>
     </div>
     <div class="row">
-        @foreach ($students as $student)
+        @foreach ($courses as $course)
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            {{$student -> fname}}
+                            {{$course -> course_name}}
                         </h5>
-                        <a href="{{ route ('students.edit',$student -> id)}}">
+                        <a href="{{ route ('courses.edit',$course -> id)}}">
                             Edit
                         </a>
                         |
-                        <a href="{{ route ('students.trash',$student -> id)}}">
+                        <a href="{{ route ('courses.trash',$course -> id)}}">
                             Delete
                         </a>
                     </div>

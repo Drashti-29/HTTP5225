@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>All Students</h1>
+    <h1>All Courses</h1>
 </body>
 </html>
