@@ -11,6 +11,6 @@ class Faculty extends Model
     use HasFactory;
 
     public function courses(){
-        $this -> hasMany(Course::class);
+       return $this -> hasMany(Course::class);
     }
 }

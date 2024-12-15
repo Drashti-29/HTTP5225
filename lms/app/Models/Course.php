@@ -20,6 +20,10 @@ class Course extends Model
     ];
     
     public function faculty(){
-        $this -> belongsTo(Faculty::class);
+        return $this -> belongsTo(Faculty::class);
+    }
+
+    public function students(){
+        return $this -> belongsToMany(Student::class);
     }
 }
